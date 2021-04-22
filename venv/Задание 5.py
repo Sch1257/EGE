@@ -13,14 +13,10 @@ def f(n):
 for i in range(100,200):
     x = bin(i)
     x = x[2:]
-    #print(x)
     x = f(x)
-    #print(x)
     x = f(x)
-    #print(x)
     x = f(x)
-    #print(x)
-    x = "0b" + x
     x = int(x, 2)
     if x % 4 == 0 and x % 8 != 0:
         print(i)
+        break # нам надо найти самый минимальный, поэтому нам нужен только первый ответ
